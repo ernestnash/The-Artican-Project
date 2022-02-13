@@ -1,0 +1,739 @@
+/* nashon ernest */
+/* nashon ernest */
+/* nashon ernest */
+/* nashon ernest */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    /* font-family: 'Caveat',sans-serif;  */
+    /* font-family: 'Estonia',sans-serif; */
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+p{
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+img{
+    width: 100%;
+}
+
+section{
+    width: 100%;
+    padding: 8rem 0;
+}
+
+.container{
+    width: 100%;
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+/* Header */
+/* Header */
+/* Header */
+
+header{
+    width: 100%;
+    background-color: black;
+    padding: 5px 0;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 1.5rem;
+}
+
+nav .logo{
+    width: 15rem;
+    cursor: pointer;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-ul li a {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 0;
+    margin-left: 3rem;
+    color: white;
+}
+
+
+.nav-link,
+.current{
+    position: relative;
+}
+
+
+.nav-link::before,
+.current::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -3px;
+    width: 50%;
+    height: 2px;
+    background-color: #FFBA00;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.6s;
+}
+
+.current::before {
+    transform: scaleX(1);
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+}
+
+.hambuger,
+.close,
+.search {
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.hambuger {
+    display: none;
+}
+
+.search {
+    font-size: 1.8rem;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5rem 3rem 0 0;
+    display: none;
+}
+
+/* intro */
+/* intro */
+/* intro */
+
+#intro {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 0;
+}
+
+#intro .container {
+    background: url(./images/backstreet1__1_-removebg-preview.png) no-repeat;
+    background-position-X: 100%;
+}
+
+.line {
+    position: relative;
+    padding-top: 3rem;
+}
+
+.line::before {
+    content: "";
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 5rem;
+    height: 3px;
+    background-color: #FFBA00;
+}
+.intro-text {
+    width: 80%;
+    padding: 8rem 0;
+}
+
+.intro-text h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    border: 2px solid #FFBA00;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 99%;
+    height: 100%;
+    background-color: #FFBA00;
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    transform: translateX(0);
+}
+
+
+
+
+.heading >* {
+    padding-bottom: 2rem;
+}
+
+.heading h2{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 4rem;
+}
+
+.heading p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FFBA00;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    row-gap: 4rem;
+    column-gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service {
+    background-color: #eee;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    transition: all .3s;
+}
+
+.service i:first-child {
+    color: #FFBA00;
+    font-size: 2rem;
+}
+
+.service:hover {
+    background-color: #FFBA00;
+    color: white;
+    cursor: pointer;
+}
+
+.service:hover i:first-child {
+    color: white;
+}
+
+.h-line {
+    position: relative;
+}
+
+.h-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 5rem;
+    background-color: #FFBA00;
+}
+
+/* intro cards */
+
+.intro-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    row-gap: 2rem;
+    column-gap: 2rem;
+    z-index: 1;
+}
+
+.card {
+    background-color: rgb(71, 70, 70);
+    padding: 6rem 3rem;
+}
+
+
+.card i {
+    font-size: 4rem;
+    color: #FDB095;
+    padding-bottom: 3rem;
+}
+
+.heading-3 {
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.card h3 {
+    padding-bottom: 4rem;
+}
+
+.card .line::before {
+    top: 7rem;
+}
+
+.card:nth-child(3) {
+    position: relative;
+    background-color: rgb(71, 70, 70);
+}
+
+.card:nth-child(3)::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -1.5rem;
+    width: 105%;
+    height: 1.5rem;
+    background-color: #FDB095;
+    z-index: -11;
+}
+
+.card:nth-child(3)::after {
+    position: absolute;
+    content: "";
+    right: -5%;
+    bottom: -1.5rem;
+    width: 5%;
+    height: 7rem;
+    background-color: #FDB095;
+}
+
+/* card hover effect */
+
+.card:hover,
+.card:first-child {
+    background-color: #FDB095;
+    color: white;
+}
+
+.card:hover i,
+.card:first-child i {
+    color: white;
+}
+
+.card:hover .line::before,
+.card:first-child .line::before {
+    background-color: white;
+}
+
+
+
+
+
+
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 1rem; 
+}
+
+.image1 {
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+
+.image {
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+}
+
+.image img {
+    filter: grayscale(80%);
+}
+
+.image::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 1;
+}
+
+.image-text {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    color: white;
+    z-index: 11;
+}
+.image-text p {
+    font-size: 20px;
+}
+.image-text h3{
+    font-size: 30px;
+}
+
+.image:hover img {
+    filter: grayscale(0);
+}
+
+/* About text */
+.about-text {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    row-gap: 4rem;
+    column-gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-text > * {
+    padding: 0 1rem;
+}
+
+.about-text h3 {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.about-text p {
+    color: #777;
+}
+
+
+
+/* categories section */
+/* categories section */
+/* categories section */
+  /* categories of art */
+
+  .categories{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.categories h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.categories p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+
+.colum{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 12px;
+}
+
+.col1{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+.col1 h3{
+    text-align: center;
+    font-weight: 600px;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.col1:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+}
+
+
+
+/* Contact section */
+/* Contact section */
+/* Contact section */
+#contact {
+    background-color: #17032c;
+    padding: 10rem 0;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact i {
+    color: white;
+    font-size: 2.5rem;
+    border: 2px solid #FFBA00;
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    border-radius: 50%;
+    margin: 2px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.contact i:hover {
+    transform: translateY(-1rem);
+}
+
+.contact h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: white;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: #FFBA00;
+}
+
+/* Modal */
+/* Modal */
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 111;
+}
+
+.modal-content {
+    width: 80%;
+    max-width: 60rem;
+    margin: 20% auto;
+    padding: 2rem;
+    position: relative;
+    text-align: center;
+    animation: slide ease 0.8s;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateY(-30rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    color: white;
+    font-size: 5rem;
+    cursor: pointer;
+}
+
+form input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    padding: 1rem;
+    color: white;
+    font-size: 1.8rem;
+    position: relative;
+    background-color: transparent;
+}
+
+::placeholder {
+    color: white;
+    font-size: 1.8rem;
+}
+
+form i {
+    position: absolute;
+    right: 2rem;
+    bottom: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* enquiry form */
+/* enquiry form */
+/* enquiry form */
+/* enquiry form */
+
+
+
+#enquiry{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: aliceblue;
+}
+.container1{
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0p 0px 20px #00000010;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.form-group{
+    width: 100%;
+    margin-top: 5px;
+    font-size: 20px;
+}
+.form-group input,
+.form-group textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid rgba(128, 128, 128, 0.1199);
+    margin-top: 5px;
+}
+textarea{
+    resize: vertical;
+}
+button[type="submit"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    color: blue;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button[type="submit"]:hover{
+    background-color: rgb(214, 226, 236);
+}
+
+
+#status{
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+#status.success{
+    background-color: rgba(211, 250, 153);
+    animation: status 4s ease forwards;
+    font-size: 20px;
+}
+#status .error{
+    background-color: rgb(250, 129, 92);
+    color: white;
+    font-size: 20px;
+    animation: status 4s ease forwards;
+}
+
+@keyframes status{
+    0% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    90% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+
+
+#Enquiry{
+    padding-top: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+/* nashon ernest */
+/* nashon ernest */
+/* nashon ernest */
+/* nashon ernest */
